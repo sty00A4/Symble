@@ -18,7 +18,7 @@ The first one is actually printing the string "hello world" the other is simply 
 Printing the numbers from 1 - 100:
 ```
   @ i 0;
-  % 100 { ++ i; <- i };
+  % 100 { ++ i; <- i }
 ```
 
 Printing the alphabet:
