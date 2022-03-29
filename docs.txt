@@ -55,7 +55,7 @@ speed testing (increment var 5000 times):
     python  154.327ms
     symble  179.893ms
 
-todo
+todo:
     [x] local variables     [op var (var) (val)]        deleted after body execution
     [ ] functions           [func < args > { body }]    body with input variables
     [ ] call functions      [op call (func) (val ...)]  call a function with input
