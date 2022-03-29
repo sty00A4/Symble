@@ -1,5 +1,5 @@
 # Symble
-A simple interpreted programming language made in python that uses symbols for all of it's keywords.
+A simple interpreted programming language made in python that uses symbols for nearly all of it's keywords.
 
 **EXPLANATION** in `docs.txt`
 
