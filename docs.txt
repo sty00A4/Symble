@@ -1,6 +1,6 @@
 speed testing (inc var 5000 times):
     python 	154.327ms
-    yuna   	179.893ms
+    symble  179.893ms
 
 todo
     [x] local variables     [op var (var) (val)]        deleted after body execution
