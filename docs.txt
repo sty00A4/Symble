@@ -1,17 +1,3 @@
-speed testing (increment var 5000 times):
-    python  154.327ms
-    symble  179.893ms
-
-todo
-    [x] local variables     [op var (var) (val)]        deleted after body execution
-    [ ] functions           [func < args > { body }]    body with input variables
-    [ ] call functions      [op call (func) (val ...)]  call a function with input
-    [x] list                [list [val ...]]            collection of values
-    [x] indexing            [index (var) (val)]         getting val of list/array at index
-    [x] replace keywords
-    [x] merge while and repeat to loop
-    [x] implement comments                              'comment'
-
 syntax:
     body =  { [op]; [op]; ... }         instructions        last ";" in body can be omitted
     op =    [op] [val] [val] ...        instruction
@@ -64,3 +50,17 @@ gets:
     int [int/float/bool/str/null]                 -> [int]          casts [int/float/bool/str/null] to int
     float [int/float/bool/str/null]               -> [float]        casts [int/float/bool/str/null] to float
     str [int/float/bool/str/null]                 -> [str]          casts [int/float/bool/str/null] to str
+
+speed testing (increment var 5000 times):
+    python  154.327ms
+    symble  179.893ms
+
+todo
+    [x] local variables     [op var (var) (val)]        deleted after body execution
+    [ ] functions           [func < args > { body }]    body with input variables
+    [ ] call functions      [op call (func) (val ...)]  call a function with input
+    [x] list                [list [val ...]]            collection of values
+    [x] indexing            [index (var) (val)]         getting val of list/array at index
+    [x] replace keywords
+    [x] merge while and repeat to loop
+    [x] implement comments                              'comment'
