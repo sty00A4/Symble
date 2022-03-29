@@ -25,10 +25,8 @@ Printing the alphabet:
 ```
   @@ abc "abcdefghijklmopqrstuvwxyz";
   @ i 0;
-  'prints out every abc letter'
   % (# abc) {
       <- abc:i;
       ++ i
-  };
-  << ** 16 2
+  }
 ```
