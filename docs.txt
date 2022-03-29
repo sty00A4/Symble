@@ -34,7 +34,7 @@ ops:
     . [var] [val]           store [val] in [var]                                a get statement is allowed without "()"
     << [val]                returns [val] to parent body                        a get statement is allowed without "()"
 
-    <- [val]                prints out [val] to the console                     a get statement is allowed without "()"
+    <_ [val]                prints out [val] to the console                     a get statement is allowed without "()"
 
     ++ [var]                increments [var] if it contains an int val
     -- [var]                decrements [var] if it contains an int val
