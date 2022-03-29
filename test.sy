@@ -1,6 +1,0 @@
-@@ abc "abcdefghijklmopqrstuvwxyz";
-@ i 0;
-% (# abc) {
-    <- abc:i;
-    ++ i
-}
