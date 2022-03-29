@@ -3,7 +3,7 @@ An interpreted programming language made in python that uses symbols for all of 
 
 **EXPLANATION** in `docs.txt`
 
-### Examples
+## Examples
 
 Hello world program:
 ```
