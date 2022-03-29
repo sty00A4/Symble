@@ -1,4 +1,4 @@
-speed testing (inc var 5000 times):
+speed testing (increment var 5000 times):
     python  154.327ms
     symble  179.893ms
 
