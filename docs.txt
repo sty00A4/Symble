@@ -1,0 +1,66 @@
+speed testing (inc var 5000 times):
+    python 	154.327ms
+    yuna   	179.893ms
+
+todo
+    [x] local variables     [op var (var) (val)]        deleted after body execution
+    [ ] functions           [func < args > { body }]    body with input variables
+    [ ] call functions      [op call (func) (val ...)]  call a function with input
+    [x] list                [list [val ...]]            collection of values
+    [x] indexing            [index (var) (val)]         getting val of list/array at index
+    [x] replace keywords
+    [x] merge while and repeat to loop
+    [x] implement comments                              'comment'
+
+syntax:
+    body =  { [op]; [op]; ... }         instructions        last ";" in body can be omitted
+    op =    [op] [val] [val] ...        instruction
+    get =   [get] [val] [val] ...       returns val
+    int =   0 / 1 / 8 / 100 / ...       whole number
+    float = 1.4 / 420.69 / ...          floating-point number
+    bool =  true / false                expressing boolean vals
+    str =   "..."                       collection of chars
+    null =  null                        undefined val
+    list =  [[val] [val] ...]           collection of vals
+    eval =  ([get] ...)                 evaluation of get   "()" makes them evaluate before other evals higher priority
+    index = [val]:[val]                 gets index of val   for lists and strs
+    neg =   -[val]                      negates val
+    not =   ![bool]                     makes true false and false true
+    var =   [name]                      container of val
+
+ops:
+    @ [var] ([val])         define local [var] with [val] if given              a get statement is allowed without "()"
+    @@ [var] ([val])        define global [var] with [val] if given             a get statement is allowed without "()"
+    . [var] [val]           store [val] in [var]                                a get statement is allowed without "()"
+    << [val]                returns [val] to parent body                        a get statement is allowed without "()"
+
+    <- [val]                prints out [val] to the console                     a get statement is allowed without "()"
+
+    ++ [var]                increments [var] if it contains an int val
+    -- [var]                decrements [var] if it contains an int val
+
+    ? [bool] [body]         if the [bool] is true it'll execute the [body]
+    (?? [bool] [body] ...)  otherwise if the [bool] of the "??" statement is true it'll execute the [body]
+    (?_ [body])             if none of them are true this [body] will execute
+    ?# [bool] [str]         if [bool] is false it'll error out with the [str]
+
+    % [bool] [body]         executes the [body] repeatedly until the [bool] is false
+    % [int] [body]          executes the [body] repeatedly for the times of the [int]
+
+gets:
+    + [int/float] [int/float] ([int/float] ...)   -> [int/float]    adds the [int/float]s in order
+    * [int/float] [int/float] ([int/float] ...)   -> [int/float]    multiplies the [int/float]s in order
+    / [int/float] [int/float] ([int/float] ...)   -> [float]        divides the first [int/float] with the other [int/float]s in order
+    ** [int/float] [int/float] ([int/float] ...)  -> [int/float]    powers (ex: x²) the [int/float]s in order
+    = [int/float/bool/str] [int/float/bool/str]   -> [bool]         returns true if both the [int/float/bool/str]s are equal
+    < [int/float] [int/float]                     -> [bool]         returns true if the first [int/float] is smaller than [int/float]
+    > [int/float] [int/float]                     -> [bool]         returns true if the first [int/float] is greater than [int/float]
+    <= [int/float] [int/float]                    -> [bool]         returns true if the first [int/float] is smaller than [int/float] or equal to [int/float]
+    >= [int/float] [int/float]                    -> [bool]         returns true if the first [int/float] is greater than [int/float] or equal to [int/float]
+    +_ [str] [str] ([str] ...)                    -> [str]          joins the [str]s together in order
+    # [list/str]                                  -> [int]          returns length of the [list/str]
+    & [bool] [bool]                               -> [bool]         returns true only if both [bool]s are true
+    | [bool] [bool]                               -> [bool]         returns true if one of the [bool]s is true
+    int [int/float/bool/str/null]                 -> [int]          casts [int/float/bool/str/null] to int
+    float [int/float/bool/str/null]               -> [float]        casts [int/float/bool/str/null] to float
+    str [int/float/bool/str/null]                 -> [str]          casts [int/float/bool/str/null] to str
