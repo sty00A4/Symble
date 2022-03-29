@@ -7,7 +7,7 @@ A simple interpreted programming language made in python that uses symbols for n
 
 Hello world program:
 ```
-  <- "hello world"
+  <_ "hello world"
 ```
 or
 ```
@@ -18,7 +18,7 @@ The first one is actually printing the string "hello world" the other is simply 
 Printing the numbers from 1 - 100:
 ```
   @ i 0;
-  % 100 { ++ i; <- i }
+  % 100 { ++ i; <_ i }
 ```
 
 Printing the alphabet:
@@ -26,7 +26,7 @@ Printing the alphabet:
   @@ abc "abcdefghijklmopqrstuvwxyz";
   @ i 0;
   % (# abc) {
-      <- abc:i;
+      <_ abc:i;
       ++ i
   }
 ```
